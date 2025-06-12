@@ -1,0 +1,36 @@
+
+/home/vsysuser/workspace/uptickpro_examples/riscv_assembly/work/csr_ops/csr_ops.elf:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000080000000 <_start>:
+    80000000:	b00022f3          	csrr	t0,mcycle
+    80000004:	00001317          	auipc	t1,0x1
+    80000008:	00c30313          	add	t1,t1,12 # 80001010 <result>
+    8000000c:	00533023          	sd	t0,0(t1)
+    80000010:	4385                	li	t2,1
+    80000012:	00001e17          	auipc	t3,0x1
+    80000016:	feee0e13          	add	t3,t3,-18 # 80001000 <tohost>
+    8000001a:	007e3023          	sd	t2,0(t3)
+    8000001e:	a001                	j	8000001e <_start+0x1e>
+
+Disassembly of section .data:
+
+0000000080001000 <tohost>:
+    80001000:	0000                	unimp
+    80001002:	0000                	unimp
+    80001004:	0000                	unimp
+    80001006:	0000                	unimp
+
+0000000080001008 <fromhost>:
+    80001008:	0000                	unimp
+    8000100a:	0000                	unimp
+    8000100c:	0000                	unimp
+    8000100e:	0000                	unimp
+
+0000000080001010 <result>:
+    80001010:	0000                	unimp
+    80001012:	0000                	unimp
+    80001014:	0000                	unimp
+    80001016:	0000                	unimp
